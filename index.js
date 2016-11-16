@@ -2,14 +2,41 @@
  * @param {HTMLNode | String} content to be copied
  */
 
-function copy(node) {
+function copy(text) {
+  let node = null;
+  let selection = window.getSelection();
   let range = document.createRange();
-  range.selectNode(node);
-  window.getSelection().addRange(range);
-  try {
-    var successful = document.execCommand('copy');
-  } catch (err) {
-    console.log('Oops, unable to copy');
+  let isText = Object.prototype.toString.call(text) === '[object String]';
+
+  if (isText) {
+    node = document.createElement("div");
+    node.textContent = text;
+    node.setAttribute('style', [
+      'position: absolute',
+      'top: -100px',
+      'width: 0',
+      'height: 0'
+    ].join(';'));
+    document.body.appendChild(node);
+  } else {
+    node = text;
   }
-  window.getSelection().removeAllRanges();
+
+  range.selectNode(node);
+  // In case of discontiguous selection 
+  selection.removeAllRanges();
+  selection.addRange(range);
+
+  try {
+    document.execCommand('copy');
+  } catch (err) {
+    console.log('unable to copy.');
+  }
+
+  if (isText) {
+    document.body.removeChild(node);
+  }
+  selection.removeAllRanges();
 }
+
+module.exports = copy;

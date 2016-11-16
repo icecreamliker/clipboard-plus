@@ -1,7 +1,7 @@
 {
   "name": "clipboard-plus",
   "version": "0.1.0",
-  "description": "Copy & cut texts to clipboard via JavaScript (ES6)",
+  "description": "Copy texts to clipboard via JavaScript (ES6)",
   "keywords": [
     "copy",
     "cut",
