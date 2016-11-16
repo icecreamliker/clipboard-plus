@@ -1,15 +1,16 @@
 {
-  "name": "copy2clipboard",
+  "name": "clipboard-plus",
   "version": "0.1.0",
-  "description": "Copy texts to clipboard via JavaScript (ES6)",
+  "description": "Copy & cut texts to clipboard via JavaScript (ES6)",
   "keywords": [
     "copy",
+    "cut",
     "clipboard",
     "es6"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/icecreamliker/copy2clipboard"
+    "url": "https://github.com/icecreamliker/clipboard-plus"
   },
   "author": "Lee Yao <yaoli111144@gmail.com>",
   "license": "MIT"
