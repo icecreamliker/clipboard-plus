@@ -3,10 +3,10 @@
  */
 
 function copy(text) {
-  let node = null;
-  let selection = window.getSelection();
-  let range = document.createRange();
-  let isText = Object.prototype.toString.call(text) === '[object String]';
+  var node = null;
+  var selection = window.getSelection();
+  var range = document.createRange();
+  var isText = Object.prototype.toString.call(text) === '[object String]';
 
   if (isText) {
     node = document.createElement("div");
