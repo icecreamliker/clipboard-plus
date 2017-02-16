@@ -6,7 +6,8 @@ function copy(text) {
   var node = null;
   var selection = window.getSelection();
   var range = document.createRange();
-  var isText = Object.prototype.toString.call(text) === '[object String]';
+  var s = Object.prototype.toString;
+  var isText = s.call(text) === '[object String]' || s.call(text) === '[object Number]';
 
   if (isText) {
     node = document.createElement("div");
