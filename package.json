@@ -1,6 +1,6 @@
 {
   "name": "clipboard-plus",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Copy texts to clipboard via JavaScript (ES6)",
   "keywords": [
     "copy",
